@@ -1,4 +1,8 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'rails_helper.rb'
+require 'helpers/posts_helper_spec.rb'
+
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true

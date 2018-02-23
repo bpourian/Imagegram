@@ -10,6 +10,19 @@ require 'rails_helper'
 #     end
 #   end
 # end
-RSpec.describe PostsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+# RSpec.describe PostsHelper, type: :helper do
+#   pending "add some examples to (or delete) #{__FILE__}"
+# end
+
+def posting_caption
+  visit '/'
+  click_link 'New Post'
+  fill_in :post_caption, with: "This is a test caption"
+  click_button 'Create Post'
+end
+
+def edit_caption
+  click_link 'Edit'
+  fill_in :post_caption, with: "This caption was edited"
+  click_button 'Update Post'
 end
