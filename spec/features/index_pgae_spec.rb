@@ -15,4 +15,10 @@ feature 'Visit index page -- ' do
     posting_caption
     expect(page).to have_content("This is a test caption")
   end
+
+  scenario 'Should add a post and edit the caption' do
+    posting_caption
+    edit_caption
+    expect(page).to have_content("This caption was edited")
+  end
 end
